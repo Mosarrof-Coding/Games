@@ -1,0 +1,253 @@
+@import "../variable/variables";
+@import "../mixins/mixin";
+// navbar part start----------------
+#banner{
+    display: block;
+    padding-top: 200px;
+    margin-bottom: 20px;
+    position: relative;
+    &::before{
+        background: linear-gradient(90deg, rgba(152, 65, 255, 0) 0%, rgba(152, 65, 255, 1) 50%, rgba(152, 65, 255, 0) 100%);
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        left: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+    .banheading{
+        width: 100%;
+        text-align: center;
+        h4{
+            text-transform: uppercase;
+            letter-spacing: 10px;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.7;
+            color: #fff;
+            font-family: 'Oxanium', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        h1{
+            font-size: 65px;
+            line-height: 65px;
+            font-family: 'Oxanium', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            font-weight: 600;
+            color: #fff;
+            text-transform: capitalize;
+        }
+        .banBtn{
+            display: flex;
+            align-items: center;
+            gap:30px;
+            margin-top: 40px;
+            justify-content: center;
+            .cmnBtn{
+                @include cmnBtn;
+            }
+            .plyer{
+                position: relative;
+                width: 60px;
+                min-height: 60px;
+                border-radius: 50%;
+                background: #f90cff;
+                background-image: linear-gradient(to right bottom, #f90cff, #e027ff, #c534ff, #a93eff, #8a44ff, #6560ff, #3c73ff, #0081ff, #009cff, #00b3ff, #00c6f5, #0cd7e8);
+                display: grid;
+                place-items: center;
+                svg{
+                    color:$samewhite;
+                    font-size: 20px;
+                    margin-left: 3px;
+                }
+                .animer{
+                    width: 60px;
+                    min-height: 60px;
+                    border-radius: 50%;
+                    background:$white;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    z-index: -3;
+                    animation: xpand ease infinite;
+                    animation-duration: 4s;
+                }
+                .anim2{
+                    z-index: -2;
+                    animation-name: xpand1;
+                }
+                .anim3{
+                    z-index: -3;
+                    animation-name: xpand2;
+                }
+            }
+            @keyframes xpand {
+                0%{
+                    transform: scale(1);
+                }
+                50%{
+                    transform: scale(3);
+                    opacity: .2;
+                }
+                100%{
+                    transform: scale(3);
+                    opacity: 0;
+                    display: none;
+                }
+            }
+            @keyframes xpand1 {
+                0%{
+                    transform: scale(1);
+                }
+                20%{
+                    transform: scale(1);
+                    opacity: 1;
+                }
+                100%{
+                    transform: scale(3);
+                    opacity: 0;
+                    display: none;
+                }
+            }
+            @keyframes xpand2 {
+                0%{
+                    transform: scale(1);
+                }
+                40%{
+                    transform: scale(1);
+                    opacity: 1;
+                }
+                100%{
+                    transform: scale(3);
+                    opacity: .0;
+                    display: none;
+                }
+            }
+        }
+        .mainDiv{
+            display: block;
+            position: relative;
+            img{
+                max-width: 100%;
+                display: block;
+                margin: 0 auto;
+            }
+            .left{
+                width: 50%;
+                height: 100%;
+                position: absolute;
+                left: -36px;
+                bottom: 0;
+                transform: skew(20deg);
+                z-index: -1;
+                .col1{
+                    width: 220px;
+                    height: 60%;
+                    left: 30%;
+                    z-index: 3;
+                    opacity: 0.8;
+                    background: #f90cff;
+                    background-image: linear-gradient(to right bottom, #f90cff, #e027ff, #c534ff, #a93eff, #8a44ff, #6560ff, #3c73ff, #0081ff, #009cff, #00b3ff, #00c6f5, #0cd7e8);
+                    position: absolute;
+                    bottom: 0;
+                    border-radius: 2px;
+                    z-index: -1;
+                }
+                .col2{
+                    background: #f90cff;
+                    background-image: linear-gradient(to right bottom, #f90cff, #e027ff, #c534ff, #a93eff, #8a44ff, #6560ff, #3c73ff, #0081ff, #009cff, #00b3ff, #00c6f5, #0cd7e8);
+                    position: absolute;
+                    bottom: 0;
+                    border-radius: 2px;
+                    width: 220px;
+                    height: 70%;
+                    left: 15%;
+                    z-index: 1;
+                    opacity: 0.7;
+                }
+                .col3{
+                    background: #f90cff;
+                    background-image: linear-gradient(to right bottom, #f90cff, #e027ff, #c534ff, #a93eff, #8a44ff, #6560ff, #3c73ff, #0081ff, #009cff, #00b3ff, #00c6f5, #0cd7e8);
+                    width: 200px;
+                    height: 80%;
+                    position: absolute;
+                    left: 3%;
+                    bottom: 0;
+                    border-radius: 2px;
+                    opacity: .5;
+                    z-index: 2;
+                }
+                .col4{
+                    background: #f90cff;
+                    background-image: linear-gradient(to right bottom, #f90cff, #e027ff, #c534ff, #a93eff, #8a44ff, #6560ff, #3c73ff, #0081ff, #009cff, #00b3ff, #00c6f5, #0cd7e8);
+                    position: absolute;
+                    bottom: 0;
+                    border-radius: 2px;
+                    width: 220px;
+                    height: 50%;
+                    left: 0%;
+                    z-index: 3;
+                    opacity: 0.6;
+                }
+            }
+            .right{
+                width: 50%;
+                height: 100%;
+                position: absolute;
+                right: -36px;
+                bottom: 0;
+                transform: skew(-20deg);
+                z-index: -1;
+                .col1{
+                    width: 220px;
+                    height: 60%;
+                    right: 30%;
+                    opacity: 0.8;
+                    background: #f90cff;
+                    background-image: linear-gradient(to right bottom, #f90cff, #e027ff, #c534ff, #a93eff, #8a44ff, #6560ff, #3c73ff, #0081ff, #009cff, #00b3ff, #00c6f5, #0cd7e8);
+                    position: absolute;
+                    bottom: 0;
+                    border-radius: 2px;
+                    z-index: 0;
+                }
+                .col2{
+                    background: #f90cff;
+                    background-image: linear-gradient(to right bottom, #f90cff, #e027ff, #c534ff, #a93eff, #8a44ff, #6560ff, #3c73ff, #0081ff, #009cff, #00b3ff, #00c6f5, #0cd7e8);
+                    position: absolute;
+                    bottom: 0;
+                    border-radius: 2px;
+                    width: 220px;
+                    height: 70%;
+                    right: 15%;
+                    z-index: 1;
+                    opacity: 0.7;
+                }
+                .col3{
+                    background: #f90cff;
+                    background-image: linear-gradient(to right bottom, #f90cff, #e027ff, #c534ff, #a93eff, #8a44ff, #6560ff, #3c73ff, #0081ff, #009cff, #00b3ff, #00c6f5, #0cd7e8);
+                    width: 200px;
+                    height: 80%;
+                    position: absolute;
+                    right: 3%;
+                    bottom: 0;
+                    border-radius: 2px;
+                    opacity: .5;
+                    z-index: 2;
+                }
+                .col4{
+                    background: #f90cff;
+                    background-image: linear-gradient(to right bottom, #f90cff, #e027ff, #c534ff, #a93eff, #8a44ff, #6560ff, #3c73ff, #0081ff, #009cff, #00b3ff, #00c6f5, #0cd7e8);
+                    position: absolute;
+                    bottom: 0%;
+                    border-radius: 2px;
+                    width: 220px;
+                    height: 50%;
+                    right: 0;
+                    z-index: 3;
+                    opacity: 0.6;
+                }
+            }
+        }
+    }
+}

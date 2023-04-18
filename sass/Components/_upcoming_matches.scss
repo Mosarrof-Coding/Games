@@ -1,0 +1,161 @@
+@import "../variable/variables";
+@import "../mixins/mixin";
+// navbar part start----------------
+#upcoming_matches{
+    padding-top: 100px;
+    .matchHeading{
+        text-align: center;
+        display: block;
+        margin-bottom: 50px;
+        h4{
+            @include h4;
+        }
+        h2{
+            font-size: 45px;
+            line-height: 50px;
+            display: block;
+            font-weight: 700;
+            text-transform: uppercase;
+            color:$white;
+            margin-bottom: 10px;
+            .green{
+                color:$sameblue;
+            }
+        }
+        p{
+            font-size: 17px;
+            line-height: 27px;
+            color: #ddd;
+            font-weight: 400;
+            letter-spacing: -0.2px;
+        }
+    }
+    .upmatches{
+        width: 100%;
+        position: relative;
+        z-index: -3;
+        img{
+            width: auto;
+            display: block;
+        }
+        .overlap{
+            display: block;
+            width: 80%;
+            padding: 20px;
+            text-align: right;
+            position: absolute;
+            z-index: -1;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            clip-path: polygon(0% -256%, 130% 103%, 47% 100%, 0% 100%);
+            background: linear-gradient(to right bottom, #f90cff, #e027ff, #c534ff, #a93eff, #8a44ff, #6560ff, #3c73ff, #0081ff, #009cff, #00b3ff, #00c6f5, #0cd7e8);
+            opacity: .7;
+            h3{
+                a{
+                    font-size: 28px;
+                    line-height: 32px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    letter-spacing: -1px;
+                    color:$white;
+                    z-index: 5;
+                }
+            }
+        }
+        .overlap2{
+            display: block;
+            width: 40%;
+            padding: 10px;
+            background: rgb(255, 255, 255);
+            text-align: right;
+            position: absolute;
+            right: 0;
+            top: 70%;
+            z-index: -1;
+            clip-path: polygon(0% -256%, 129% 99%, 26% 105%, 0% 156%);
+            background: linear-gradient(to right bottom, #f90cff, #e027ff, #c534ff, #a93eff, #8a44ff, #6560ff, #3c73ff, #0081ff, #009cff, #00b3ff, #00c6f5, #0cd7e8);
+            opacity: .7;
+        }
+    }
+    .tvshow{
+        display: block;
+        text-align: center;
+        h1{
+            color:$white;
+        }
+        h6{
+            color:$white;
+        }
+        .icon{
+            display: flex;
+            justify-content: center;
+            gap:15px;
+            margin: 20px 0;
+            .fa-youtube, .fa-tv{
+                font-size: 30px;
+                color:$white !important;
+            }
+        }
+
+    }
+    .pastmatch{
+        width: 100%;
+        position: relative;
+        z-index: -3;
+        display: flex;
+        justify-content: right;
+        img{
+            width: auto;
+            display: block;
+        }
+        .overlap{
+            display: block;
+            width: 80%;
+            padding: 20px;
+            text-align: left;
+            position: absolute;
+            z-index: -1;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            clip-path: polygon(103% -367%, 142% 100%, 53% 103%, -21% 104%);
+            background: linear-gradient(to right bottom, #f90cff, #e027ff, #c534ff, #a93eff, #8a44ff, #6560ff, #3c73ff, #0081ff, #009cff, #00b3ff, #00c6f5, #0cd7e8);
+            opacity: .7;
+            h3{
+                a{
+                    font-size: 28px;
+                    line-height: 32px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    letter-spacing: -1px;
+                    color:$white;
+                    z-index: 50;
+                    display: inline-block;
+                }
+            }
+        }
+        .overlap2{
+            display: block;
+            width: 40%;
+            padding: 10px;
+            background: rgb(255, 255, 255);
+            text-align: left;
+            position: absolute;
+            left: 0;
+            top: 70%;
+            z-index: -1;
+            clip-path: polygon(34% -269%, 127% 100%, 49% 102%, -13% 152%);
+            background: linear-gradient(to right bottom, #f90cff, #e027ff, #c534ff, #a93eff, #8a44ff, #6560ff, #3c73ff, #0081ff, #009cff, #00b3ff, #00c6f5, #0cd7e8);
+            opacity: .7;
+        }
+
+    }
+    .loadmore{
+        margin: 50px 0;
+        text-align: center;
+        a{
+            @include cmnBtn;
+        }
+    }
+}

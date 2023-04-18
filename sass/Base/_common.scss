@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    font-family: 'Oxanium', sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+    -webkit-font-smoothing: antialiased;
+}
+a{
+    text-decoration: none;
+    font-family: 'Oxanium', sans-serif;
+}
+img{
+    vertical-align: middle;
+}
+li{
+    list-style: none;
+}
+body{
+    width: 100%;
+    background: url(../images/body-bg.jpg);
+    background-position: 0 0;
+    background-repeat:repeat;
+
+}
+html,body{
+    overflow-x: hidden;
+}

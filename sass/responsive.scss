@@ -1,0 +1,155 @@
+@media (max-width: 991px) {
+    footer{
+        .usefulLink{
+            ul{
+                padding-left: 0 !important;
+                margin-top: 30px !important;
+            }
+        }
+    }
+    .mytoggler{
+        border: none !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        span{
+            svg{
+                color:#fff !important;
+                font-size: 30px !important;
+            }
+        }
+    }
+}
+@media (max-width: 575px) {
+    h1{
+        font-size: 28px !important;
+        line-height: 1.2 !important;
+        letter-spacing: normal !important;
+    }
+    h2{
+        font-size: 24px !important;
+        line-height: 1.2 !important;
+        letter-spacing: normal !important;
+    }
+    h3{
+        font-size: 22px !important;
+        line-height: 1.2 !important;
+        letter-spacing: normal !important;
+    }
+    h4{
+        font-size: 18px !important;
+        line-height: 1.2 !important;
+        letter-spacing: normal !important;
+    }
+    h5{
+        font-size: 16px !important;
+        line-height: 1.2 !important;
+        letter-spacing: normal !important;
+    }
+    h6{
+        font-size: 14px !important;
+        line-height: 1.2 !important;
+        letter-spacing: normal !important;
+    }
+    p{
+        font-size: 14px !important;
+        line-height: 1.2 !important;
+        letter-spacing: normal !important;
+    }
+    a{
+        font-size: 14px !important;
+    }
+    #navbar{
+        nav{
+            padding: 0 !important;
+            .mybrand{
+                img{
+                    display: inline-block;
+                    width: 80px !important;
+                }
+            }
+            .mytoggler{
+                border: none !important;
+                padding: 0 !important;
+                box-shadow: none !important;
+                span{
+                    svg{
+                        color:#fff !important;
+                    }
+                }
+            }
+            .mecollespe{
+                .meul{
+                    display: block !important;
+                    .meli{
+                        display: block !important;
+                        .droplink{
+
+                        }
+                        .mydropdown{
+                            display: none !important;
+                        }
+
+                    }
+                }
+                form{
+                    display: none !important;
+                }
+            }
+        }
+    }
+    #banner{
+        padding-top: 100px !important;
+        .banheading{
+            .banBtn{
+                .plyer{
+
+                }
+            }
+        }
+    }
+    #upcoming_matches{
+        padding-top: 50px !important;
+        .upmatches{
+            margin-top: 10px !important;
+            img{
+                width: 120px !important;
+            }
+            .overlap{
+                width: 85% !important;
+                padding: 0 50px !important;
+                display: grid !important;
+                place-items: center !important;
+            }
+            .overlap2{
+                width: 70% !important;
+            }
+        }
+        .tvshow{
+            margin-top: 20px;
+        }
+        .pastmatch{
+            img{
+                width: 120px !important;
+            }
+            .overlap{
+                width: 85% !important;
+                padding: 0 50px !important;
+                display: grid !important;
+                place-items: center !important;
+            }
+            .overlap2{
+                width: 70% !important;
+            }
+        }
+    }
+    #gameplay{
+        .utub1 {
+            display: none !important;
+        }
+    }
+    #gammer{
+        .superFans{
+            margin-top: 0 !important;
+        }
+    }
+}

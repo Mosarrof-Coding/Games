@@ -1,0 +1,118 @@
+@import "../variable/variables";
+@import "../mixins/mixin";
+// navbar part start----------------
+#navbar{
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    .navbar{
+        background: $navcolor;
+        position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -17px;
+            width: 175px;
+            height: 18px;
+            background: $navcolor;
+            clip-path: polygon(0 0, 100% 0%, 82% 100%, 0% 100%);
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: -17px;
+            width: 175px;
+            height: 18px;
+            background: $navcolor;
+            clip-path: polygon(0 0, 100% 0%, 100% 100%, 18% 100%);
+        }
+        .mybrand{
+        }
+        .mytoggler{
+            span{
+                svg{
+                    width: 20px;
+                }
+            }
+        }
+        .mecollespe{
+            .meul{
+                display: flex;
+                flex-wrap: wrap;
+                .meli{
+                    position: relative;
+                    a.droplink{
+                        display: inline-block;
+                        font-size: 15px;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        color: $samewhite;
+                        padding: 0;
+                        padding:15px 0;
+                        margin: 0 15px;
+                        line-height: 1;
+                        -webkit-font-smoothing: antialiased;
+                        cursor: pointer;
+                        position: relative;
+                        z-index: 1;
+                        &::after {
+                            display: none;
+                        }
+                        &::before{
+                            background-color: $sameblue;
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            bottom: 10px;
+                            display: inline-block;
+                            width: 0%;
+                            height: 4px;
+                            transition: ease-out .3s;
+                        }
+                        &:hover{
+                            &::before{
+                                width: 100%;
+                            }
+                        }
+                    }
+                    .mydropdown{
+                        background:$trp;
+                        opacity: 0;
+                        visibility: hidden;
+                        position: absolute;
+                        left: 0;
+                        top: 100%;
+                        z-index: 99;
+                        padding: 5px 10px 30px 15px;
+                        width: 170px;
+                        li{
+                            padding: 20px 0;
+                            border-bottom: 1px solid rgba(154, 154, 154, 0.429);
+                            a{
+                                text-transform: capitalize;
+                                color:$samewhite;
+                                &:hover{
+                                    color: $white;
+                                }
+                            }
+                        }
+                    }
+                    &:hover{
+                        .mydropdown{
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+                }
+            }
+            .cmnBtn{
+                margin-left: 20px;
+                @include cmnBtn;
+            }
+        }
+    }
+}

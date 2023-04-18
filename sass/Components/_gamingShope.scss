@@ -1,0 +1,93 @@
+@import "../mixins/mixin";
+@import "../variable/variables";
+// gamingshop------------------
+#gamingShope{
+    padding-top: 100px;
+    .Gshpheding{
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding-bottom: 20px;
+        h4{
+            @include h4;
+            color:$white;
+        }
+        h2{
+            @include h2;
+            color:$white;
+        }
+        p{
+            @include p;
+        }
+    }
+    .gammingshopSlider{
+        .gamtools{
+            margin: 0 6px;
+            position: relative;
+            .gimg{
+                position: relative;
+                img{
+                    display: block;
+                    background: $navcolor;
+                }
+                .atCartBtn{
+                    position: absolute;
+                    left: 50%;
+                    bottom: 5%;
+                    transform: translateX(-50%);
+                    @include cmnBtn;
+                    display: none;
+                }
+                &:hover{
+                    .atCartBtn{
+                        display: inline-block;
+                    }
+                }
+            }
+            .tootext{
+                padding: 15px 10px;
+                background: $dark;
+                .gtools{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    .green{
+                        color:$sameblue;
+                    }
+                }
+                h6{
+                    color:$darkyellow;
+                    font-size: 14px;
+                    a{
+                        color:$softyellow;
+                        text-transform: capitalize;
+                    }
+                }
+                h3{
+                    text-transform: capitalize;
+                    a{
+                        color:$white;
+                    }
+                }
+            }
+            .hot{
+                padding:3px 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 1.5;
+                color:$white;
+                background: $darkyellow;
+                position: absolute;
+                left: 5%;
+                top: 3%;
+                clip-path: polygon(0% 0%, 90% 0, 100% 30%, 100% 100%, 0 100%);
+                a{
+                    color:$white;
+                }
+            }
+        }
+    }
+}

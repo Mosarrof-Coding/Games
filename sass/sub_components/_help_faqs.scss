@@ -1,0 +1,262 @@
+#help_faqs{
+    padding: 150px 0;
+    position: relative;
+    &::after{
+        width: 100%;
+        height: 4px;
+        display: block;
+        background: linear-gradient(90deg, rgba(152, 65, 255, 0.5) 0%, rgba(152, 65, 255, 1) 50%, rgba(152, 65, 255, 0.5) 100%);
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 0;
+    }
+    .helpShap{
+        .shape{
+            background: #f90cff;
+            background-image: linear-gradient(to right bottom, #f90cff, #e027ff, #c534ff, #a93eff, #8a44ff, #6560ff, #3c73ff, #0081ff, #009cff, #00b3ff, #00c6f5, #0cd7e8);
+            clip-path: polygon(0 0, 100% 0%, 85% 100%, 0 100%);
+            width: 200px;
+            height: 60px;
+            position: absolute;
+            left: 1%;
+            bottom: 0;
+            border-radius: 2px;
+        }
+        .sp1{
+            clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .sp2{
+            left: 86%;
+        }
+        .sp3{
+            clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+            width: 400px;
+            height: 40px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            opacity: 0.5;
+            border-radius: 2px;
+            z-index: -1;
+        }
+    }
+    .help_heading{
+        display: block;
+        text-align: center;
+        h4{
+            @include h4;
+            color:$sameblue;
+        }
+        h2{
+            color:$white;
+            @include h2;
+        }
+        p{
+            color:$samewhite;
+            @include p;
+        }
+    }
+}
+// accrodoion------------------
+#accrodion{
+    display: block;
+    padding-top: 50px;
+    background: none;
+    .accor_item{
+        .accordion{
+            .myaccorItm{
+                background: $trp2;
+                border: 1px solid transparent !important;
+                color:$white;
+                .accordion-button:not(.collapsed) {
+                    color: #fff;
+                    background-color: $trp;
+                }
+                .accordion-button:not(.collapsed):after {
+                    background-image: inherit;
+                    content: "\f067";
+                    color: #fff;
+                    transform: inherit;
+                    font-size: 16px;
+                }
+                .accordion-button:after {
+                    background-image: inherit;
+                    content: "\f068";
+                    font-family: "Font Awesome 5 Free";
+                    font-size: 16px;
+                    position: absolute;
+                    right: 20px;
+                    top: 50%;
+                    color: #ddd;
+                    font-weight: 600;
+                    transform: translateY(-50%) !important;
+                    line-height: 1;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .accordion-button{
+                    background: #341e6db8;
+                    border: none !important;
+                    outline: none !important;
+                    color:$white;
+                }
+                .accordion-button:focus{
+                    box-shadow: none !important;
+                    border: none !important;
+                    outline: none !important;
+                }
+
+            }
+            .myaccorItm:focus{
+                border: none !important;
+                outline: none !important;
+            }
+            
+        }
+        .accordion:focus{
+            border: none !important;
+            outline: none !important;
+        }
+    }
+    .accor_misc{
+        width: 100%;
+        padding: 20px;
+        background: $trp2;
+        form{
+            display: block;
+            position: relative;
+            input{
+                width: 100%;
+                padding: 15px;
+                background: $navcolor;
+                outline: none;
+                border: 1px solid $sameblue;
+            }
+            .search3{
+                display: inline-block;
+                position: absolute;
+                right: 5%;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+    .accor_misc1{
+        width: 100%;
+        padding: 20px;
+        background: $trp2;
+        margin-top: 24px;
+        ul{
+            padding:0;
+            .u_line{
+                display: inline-block;
+                position: relative;
+                font-size: 20px;
+                text-transform: capitalize;
+                color:$white;
+                &::after{
+                    width: 70%;
+                    height: 5px;
+                    background: $sameblue;
+                    position: absolute;
+                    left: 0;
+                    top: 100%;
+                    content: "";
+                    display: inline-block;
+                }
+            }
+            .staticLi{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 20px;
+                .staticA{
+                    font-size: 17px;
+                    line-height: 27px;
+                    color: $samewhite;
+                    font-weight: 400;
+                    text-transform: capitalize;
+                    display: inline-block;
+                }
+                .numb{
+                    font-size: 17px;
+                    line-height: 27px;
+                    color: $samewhite;
+                    font-weight: 400;
+                    text-transform: capitalize;
+                    display: inline-block;
+                    background: rgba(152, 65, 255, 0.3);
+                    clip-path: polygon(0% 0%, 80% 0, 100% 20%, 100% 100%, 0 100%);
+                    font-size: 14px;
+                    width: 30px;
+                    height: 30px;
+                    line-height: 30px;
+                    text-align: center;
+                    transition: all .3s cubic-bezier(.165, .84, .44, 1);
+                }
+                &:hover{
+                    .staticA{
+                        color:$sameblue;
+                        text-decoration: underline;
+                    }
+                    .numb{
+                        background: $sameblue;
+                    }
+                }
+            }
+            .imgli{
+                
+                .articlimg{
+                    margin-top: 20px;
+                    width: 100%;
+                    img{
+                        width: 100%;
+                    }
+                }
+                .articletxt{
+                    margin-top: 20px;
+                    display: block;
+                    .articleancor{
+                        display: block;
+                        color:$white;
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                    .articleDat{
+                        display: block;
+                        color:$samewhite;
+                    }
+                }
+            }
+            .btnss{
+                display: block;
+                width: 100%;
+                padding-top: 20px;
+                .minibtn2{
+                    display:inline-block;
+                    border-radius: 5px;
+                    overflow: hidden;
+                    a{
+                        padding: 5px 10px;
+                        display: inline-block;
+                        background: $trp2;
+                        color:$white;
+                        font-size: 14px;
+                        font-weight: 600;
+                        text-transform: capitalize;
+                    }
+                    &:hover{
+                        background: $sameblue;
+                    }
+                }
+            }
+        }
+    }
+}
