@@ -156,4 +156,11 @@ $(function(){
       ]
   });
 })
-       
+
+// preloader--------------
+let preeloader = document.querySelector('#preeloader');
+$(function(){
+  setTimeout(() => {
+    preeloader.style.display = 'none';
+  }, 2000);
+})
