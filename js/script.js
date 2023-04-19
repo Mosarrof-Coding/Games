@@ -14,6 +14,13 @@ $('.gameplaySlider').slick({
     cssEase: 'linear',
     responsive: [
       {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        }
+      },
+      {
         breakpoint: 992,
         settings: {
           slidesToShow: 1,
@@ -45,6 +52,13 @@ $(function(){
         breakpoint: 992,
         settings: {
           slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
           slidesToScroll: 1,
         }
       },
