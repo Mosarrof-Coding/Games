@@ -3,10 +3,11 @@
 // navbar part start----------------
 #navbar{
     width: 100%;
+    z-index: 999;
     position: fixed;
     left: 0;
     top: 0;
-    z-index: 999;
+    width: 100%;
     .navbar{
         background: $navcolor;
         position: relative;
@@ -31,6 +32,7 @@
             clip-path: polygon(0 0, 100% 0%, 100% 100%, 18% 100%);
         }
         .mybrand{
+            background: transparent;
         }
         .mytoggler{
             span{
@@ -79,6 +81,11 @@
                             }
                         }
                     }
+                    .droplink.scrollto{
+                    }
+                    .droplink.active{
+                        color:rgb(213, 8, 8);
+                    }
                     .mydropdown{
                         background:$trp;
                         opacity: 0;
@@ -105,6 +112,11 @@
                         .mydropdown{
                             opacity: 1;
                             visibility: visible;
+                        }
+                        a.droplink{
+                            &::before{
+                                width: 100%;
+                            }
                         }
                     }
                 }

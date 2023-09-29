@@ -114,7 +114,7 @@ $('.gamslider').slick({
     ]
   });
 })
-         
+    
 // gammingshopSliderLast--------------
 $(function(){
   $('.gammingshopSliderLast').slick({
@@ -158,9 +158,36 @@ $(function(){
 })
 
 // preloader--------------
-let preeloader = document.querySelector('#preeloader');
-$(function(){
-  setTimeout(() => {
-    preeloader.style.display = 'none';
-  }, 2000);
-})
+const preloader = document.querySelector('#preeloader');
+if (preloader) {
+  window.addEventListener('load', () => {
+    preloader.remove();
+  });
+};
+
+// click event audio play--------------------------
+const audio = new Audio();
+audio.src = './images/sound.wav';
+
+// pagination-----------
+let navbarlinks = select('.meul .scrollto', true)
+const navbarlinksActive = () => {
+  let position = window.scrollY + 200
+  navbarlinks.forEach(navbarlink => {
+    if (!navbarlink.hash) return
+    let section = select(navbarlink.hash)
+    if (!section) return
+    if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
+      navbarlink.classList.add('active')
+    } else {
+      navbarlink.classList.remove('active')
+    }
+  })
+}
+const scrollto = (el) => {
+  let elementPos = select(el).offsetTop
+  window.scrollTo({
+    top: elementPos,
+    behavior: 'smooth'
+  })
+}

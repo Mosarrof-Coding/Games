@@ -36,10 +36,11 @@ html, body {
 
 #navbar {
   width: 100%;
+  z-index: 999;
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 999;
+  width: 100%;
 }
 #navbar .navbar {
   background: #0c0c35;
@@ -66,6 +67,9 @@ html, body {
   background: #0c0c35;
   -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 18% 100%);
           clip-path: polygon(0 0, 100% 0%, 100% 100%, 18% 100%);
+}
+#navbar .navbar .mybrand {
+  background: transparent;
 }
 #navbar .navbar .mytoggler span svg {
   width: 20px;
@@ -109,6 +113,9 @@ html, body {
 #navbar .navbar .mecollespe .meul .meli a.droplink:hover::before {
   width: 100%;
 }
+#navbar .navbar .mecollespe .meul .meli .droplink.active {
+  color: rgb(213, 8, 8);
+}
 #navbar .navbar .mecollespe .meul .meli .mydropdown {
   background: rgba(12, 12, 53, 0.9058823529);
   opacity: 0;
@@ -135,9 +142,11 @@ html, body {
   opacity: 1;
   visibility: visible;
 }
+#navbar .navbar .mecollespe .meul .meli:hover a.droplink::before {
+  width: 100%;
+}
 #navbar .navbar .mecollespe .cmnBtn {
   margin-left: 20px;
-  padding: 0 20px;
   background: #f90cff;
   background-image: linear-gradient(to right bottom, #f90cff, #e027ff, #c534ff, #a93eff, #8a44ff, #6560ff, #3c73ff, #0081ff, #009cff, #00b3ff, #00c6f5, #0cd7e8);
   -webkit-clip-path: polygon(0% 0%, 90% 0, 100% 30%, 100% 100%, 0 100%);
@@ -145,19 +154,18 @@ html, body {
   color: #fff;
   font-size: 15px;
   font-weight: 600;
-  letter-spacing: 0;
   text-align: center;
   text-transform: capitalize;
-  display: inline-block;
-  min-width: 180px;
-  height: 50px;
-  line-height: 50px;
+  padding: 10px 20px;
   border-radius: 2px;
-  white-space: nowrap;
-  overflow: hidden;
+  transition: all linear 0.3s;
 }
 #navbar .navbar .mecollespe .cmnBtn .green {
   color: #9841ff;
+}
+#navbar .navbar .mecollespe .cmnBtn:hover {
+  background-image: conic-gradient(rgb(235, 68, 213), green, pink, gray, blue, yellow);
+  transition: all linear 0.3s;
 }
 
 #banner {
@@ -207,7 +215,6 @@ html, body {
   justify-content: center;
 }
 #banner .banheading .banBtn .cmnBtn {
-  padding: 0 20px;
   background: #f90cff;
   background-image: linear-gradient(to right bottom, #f90cff, #e027ff, #c534ff, #a93eff, #8a44ff, #6560ff, #3c73ff, #0081ff, #009cff, #00b3ff, #00c6f5, #0cd7e8);
   -webkit-clip-path: polygon(0% 0%, 90% 0, 100% 30%, 100% 100%, 0 100%);
@@ -215,19 +222,18 @@ html, body {
   color: #fff;
   font-size: 15px;
   font-weight: 600;
-  letter-spacing: 0;
   text-align: center;
   text-transform: capitalize;
-  display: inline-block;
-  min-width: 180px;
-  height: 50px;
-  line-height: 50px;
+  padding: 10px 20px;
   border-radius: 2px;
-  white-space: nowrap;
-  overflow: hidden;
+  transition: all linear 0.3s;
 }
 #banner .banheading .banBtn .cmnBtn .green {
   color: #9841ff;
+}
+#banner .banheading .banBtn .cmnBtn:hover {
+  background-image: conic-gradient(rgb(235, 68, 213), green, pink, gray, blue, yellow);
+  transition: all linear 0.3s;
 }
 #banner .banheading .banBtn .plyer {
   position: relative;
@@ -590,7 +596,6 @@ html, body {
   text-align: center;
 }
 #upcoming_matches .loadmore a {
-  padding: 0 20px;
   background: #f90cff;
   background-image: linear-gradient(to right bottom, #f90cff, #e027ff, #c534ff, #a93eff, #8a44ff, #6560ff, #3c73ff, #0081ff, #009cff, #00b3ff, #00c6f5, #0cd7e8);
   -webkit-clip-path: polygon(0% 0%, 90% 0, 100% 30%, 100% 100%, 0 100%);
@@ -598,19 +603,18 @@ html, body {
   color: #fff;
   font-size: 15px;
   font-weight: 600;
-  letter-spacing: 0;
   text-align: center;
   text-transform: capitalize;
-  display: inline-block;
-  min-width: 180px;
-  height: 50px;
-  line-height: 50px;
+  padding: 10px 20px;
   border-radius: 2px;
-  white-space: nowrap;
-  overflow: hidden;
+  transition: all linear 0.3s;
 }
 #upcoming_matches .loadmore a .green {
   color: #9841ff;
+}
+#upcoming_matches .loadmore a:hover {
+  background-image: conic-gradient(rgb(235, 68, 213), green, pink, gray, blue, yellow);
+  transition: all linear 0.3s;
 }
 
 #gameplay {
@@ -1004,7 +1008,6 @@ html, body {
   color: #dddddd;
 }
 #gammer .superFans .fanHeading .fanBtn a {
-  padding: 0 20px;
   background: #f90cff;
   background-image: linear-gradient(to right bottom, #f90cff, #e027ff, #c534ff, #a93eff, #8a44ff, #6560ff, #3c73ff, #0081ff, #009cff, #00b3ff, #00c6f5, #0cd7e8);
   -webkit-clip-path: polygon(0% 0%, 90% 0, 100% 30%, 100% 100%, 0 100%);
@@ -1012,19 +1015,18 @@ html, body {
   color: #fff;
   font-size: 15px;
   font-weight: 600;
-  letter-spacing: 0;
   text-align: center;
   text-transform: capitalize;
-  display: inline-block;
-  min-width: 180px;
-  height: 50px;
-  line-height: 50px;
+  padding: 10px 20px;
   border-radius: 2px;
-  white-space: nowrap;
-  overflow: hidden;
+  transition: all linear 0.3s;
 }
 #gammer .superFans .fanHeading .fanBtn a .green {
   color: #9841ff;
+}
+#gammer .superFans .fanHeading .fanBtn a:hover {
+  background-image: conic-gradient(rgb(235, 68, 213), green, pink, gray, blue, yellow);
+  transition: all linear 0.3s;
 }
 #gammer .superFans .inpGroup2 {
   width: 100%;
@@ -1050,7 +1052,6 @@ html, body {
   color: #dddddd !important;
 }
 #gammer .superFans .sbtn {
-  padding: 0 20px;
   background: #f90cff;
   background-image: linear-gradient(to right bottom, #f90cff, #e027ff, #c534ff, #a93eff, #8a44ff, #6560ff, #3c73ff, #0081ff, #009cff, #00b3ff, #00c6f5, #0cd7e8);
   -webkit-clip-path: polygon(0% 0%, 90% 0, 100% 30%, 100% 100%, 0 100%);
@@ -1058,19 +1059,18 @@ html, body {
   color: #fff;
   font-size: 15px;
   font-weight: 600;
-  letter-spacing: 0;
   text-align: center;
   text-transform: capitalize;
-  display: inline-block;
-  min-width: 180px;
-  height: 50px;
-  line-height: 50px;
+  padding: 10px 20px;
   border-radius: 2px;
-  white-space: nowrap;
-  overflow: hidden;
+  transition: all linear 0.3s;
 }
 #gammer .superFans .sbtn .green {
   color: #9841ff;
+}
+#gammer .superFans .sbtn:hover {
+  background-image: conic-gradient(rgb(235, 68, 213), green, pink, gray, blue, yellow);
+  transition: all linear 0.3s;
 }
 #gammer .gameSLider {
   padding: 50px 0;
@@ -1134,7 +1134,6 @@ html, body {
   left: 50%;
   bottom: 5%;
   transform: translateX(-50%);
-  padding: 0 20px;
   background: #f90cff;
   background-image: linear-gradient(to right bottom, #f90cff, #e027ff, #c534ff, #a93eff, #8a44ff, #6560ff, #3c73ff, #0081ff, #009cff, #00b3ff, #00c6f5, #0cd7e8);
   -webkit-clip-path: polygon(0% 0%, 90% 0, 100% 30%, 100% 100%, 0 100%);
@@ -1142,20 +1141,19 @@ html, body {
   color: #fff;
   font-size: 15px;
   font-weight: 600;
-  letter-spacing: 0;
   text-align: center;
   text-transform: capitalize;
-  display: inline-block;
-  min-width: 180px;
-  height: 50px;
-  line-height: 50px;
+  padding: 10px 20px;
   border-radius: 2px;
-  white-space: nowrap;
-  overflow: hidden;
+  transition: all linear 0.3s;
   display: none;
 }
 #gamingShope .gammingshopSlider .gamtools .gimg .atCartBtn .green {
   color: #9841ff;
+}
+#gamingShope .gammingshopSlider .gamtools .gimg .atCartBtn:hover {
+  background-image: conic-gradient(rgb(235, 68, 213), green, pink, gray, blue, yellow);
+  transition: all linear 0.3s;
 }
 #gamingShope .gammingshopSlider .gamtools .gimg:hover .atCartBtn {
   display: inline-block;
@@ -1275,7 +1273,6 @@ html, body {
   text-align: center;
   text-transform: capitalize;
   display: inline-block;
-  position: relative;
   border-radius: 2px;
   white-space: nowrap;
   overflow: hidden;
@@ -1447,7 +1444,6 @@ footer .usefulLink ul form input::placeholder {
 }
 footer .usefulLink ul form .sbbtn {
   margin-top: 7px;
-  padding: 0 20px;
   background: #f90cff;
   background-image: linear-gradient(to right bottom, #f90cff, #e027ff, #c534ff, #a93eff, #8a44ff, #6560ff, #3c73ff, #0081ff, #009cff, #00b3ff, #00c6f5, #0cd7e8);
   -webkit-clip-path: polygon(0% 0%, 90% 0, 100% 30%, 100% 100%, 0 100%);
@@ -1455,19 +1451,18 @@ footer .usefulLink ul form .sbbtn {
   color: #fff;
   font-size: 15px;
   font-weight: 600;
-  letter-spacing: 0;
   text-align: center;
   text-transform: capitalize;
-  display: inline-block;
-  min-width: 180px;
-  height: 50px;
-  line-height: 50px;
+  padding: 10px 20px;
   border-radius: 2px;
-  white-space: nowrap;
-  overflow: hidden;
+  transition: all linear 0.3s;
 }
 footer .usefulLink ul form .sbbtn .green {
   color: #9841ff;
+}
+footer .usefulLink ul form .sbbtn:hover {
+  background-image: conic-gradient(rgb(235, 68, 213), green, pink, gray, blue, yellow);
+  transition: all linear 0.3s;
 }
 
 #preeloader {
